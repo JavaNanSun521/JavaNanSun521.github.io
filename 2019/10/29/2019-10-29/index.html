@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JSP实现登录功能第一步: 创建login.jsp登录页面在所创建的动态项目his_v1中，于WebContent文件夹下创建login.jsp。其显示效果类似于下图: 对应源代码如下： &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;!– 需要注意的是:xml配置文件中的url-pattern这里写的是/LoginServlet，而在jsp中form表单的action写的是Login">
+  <meta name="description" content="—$ hexo new “2019.10.29”9个内置对象：   可以不加声明和创建就可以在JSP页面脚本(Java程序片和Java表达式)中使用的成员变量1、out对象    out对象是JspWriter类的实例,是向客户端输出内容常用的对象    out对象的作用是向客户端输出数据。序号 方 法 说 明（1） void clear() 清除缓冲区的内容（2） void clearBuffe">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/2019/10/23/2019-10-21/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/10/29/2019-10-29/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="JSP实现登录功能第一步: 创建login.jsp登录页面在所创建的动态项目his_v1中，于WebContent文件夹下创建login.jsp。其显示效果类似于下图: 对应源代码如下： &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;!– 需要注意的是:xml配置文件中的url-pattern这里写的是/LoginServlet，而在jsp中form表单的action写的是Login">
+<meta property="og:description" content="—$ hexo new “2019.10.29”9个内置对象：   可以不加声明和创建就可以在JSP页面脚本(Java程序片和Java表达式)中使用的成员变量1、out对象    out对象是JspWriter类的实例,是向客户端输出内容常用的对象    out对象的作用是向客户端输出数据。序号 方 法 说 明（1） void clear() 清除缓冲区的内容（2） void clearBuffe">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-23T09:06:20.981Z">
+<meta property="og:updated_time" content="2019-10-29T01:00:33.822Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="JSP实现登录功能第一步: 创建login.jsp登录页面在所创建的动态项目his_v1中，于WebContent文件夹下创建login.jsp。其显示效果类似于下图: 对应源代码如下： &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;!– 需要注意的是:xml配置文件中的url-pattern这里写的是/LoginServlet，而在jsp中form表单的action写的是Login">
+<meta name="twitter:description" content="—$ hexo new “2019.10.29”9个内置对象：   可以不加声明和创建就可以在JSP页面脚本(Java程序片和Java表达式)中使用的成员变量1、out对象    out对象是JspWriter类的实例,是向客户端输出内容常用的对象    out对象的作用是向客户端输出数据。序号 方 法 说 明（1） void clear() 清除缓冲区的内容（2） void clearBuffe">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,110 +154,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-2019-10-21" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-2019-10-29" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="JSP"><a href="#JSP" class="headerlink" title="JSP"></a>JSP</h2><h1 id="实现登录功能"><a href="#实现登录功能" class="headerlink" title="实现登录功能"></a>实现登录功能</h1><h2 id="第一步-创建login-jsp登录页面"><a href="#第一步-创建login-jsp登录页面" class="headerlink" title="第一步: 创建login.jsp登录页面"></a>第一步: 创建login.jsp登录页面</h2><p>在所创建的动态项目his_v1中，于WebContent文件夹下创建login.jsp。其显示效果类似于下图:</p>
-<p>对应源代码如下：</p>
-<pre><code>&lt;html&gt;
-&lt;body&gt;
-&lt;!– 需要注意的是:xml配置文件中的url-pattern这里写的是/LoginServlet，而在jsp中form表单的action写的是LoginServlet,而不是/LoginServlet。 –&gt;
-&lt;form action=”LoginServlet” method=”post”&gt;
-&lt;table&gt;
-&lt;tr&gt;
-&lt;td colspan=”2”&gt;登录窗口&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;用户名：&lt;/td&gt;
-&lt;td&gt;&lt;input type=”text” name=”username” /&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;密码：&lt;/td&gt;
-&lt;td&gt;&lt;input type=”password” name=”password” /&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td colspan=”2”&gt;&lt;input type=”submit” value=”登录” /&gt; &lt;a href=”register.jsp”&gt;注册&lt;/a&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
-&lt;/form&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre><h2 id="第二步：创建处理登录判定的Servlet-LoginServlet"><a href="#第二步：创建处理登录判定的Servlet-LoginServlet" class="headerlink" title="第二步：创建处理登录判定的Servlet:LoginServlet"></a>第二步：创建处理登录判定的Servlet:LoginServlet</h2><p>在第一步中的login.jsp中，我们需要特别注意这句代码：</p>
-<form action="”LoginServlet”" method="”post”">
+        <p>—$ hexo new “2019.10.29”<br>9个内置对象：<br>   可以不加声明和创建就可以在JSP页面脚本(Java程序片和Java表达式)中使用的成员变量<br>1、out对象<br>    out对象是JspWriter类的实例,是向客户端输出内容常用的对象<br>    out对象的作用是向客户端输出数据。<br>序号 方 法 说 明<br>（1） void clear() 清除缓冲区的内容<br>（2） void clearBuffer() 清除缓冲区的当前内容<br>（3） void flush() 清空流<br>（4） int getBufferSize() 返回缓冲区以字节数的大小，如不设缓冲区则为0<br>（5） int getRemaining() 返回缓冲区还剩余多少可用<br>（6） boolean isAutoFlush() 返回缓冲区满时，是自动清空还是抛出异常<br>（7） void close() 关闭输出流<br>（8） out.newLine();输出一个换行符<br> 2、request对象(作用域：用户请求期)<br>     Request对象主要用于接受客户端通过HTTP协议连接传输到服务端的数据，通常是HttpServletRequest的子类。当客户端请求JSP网页时，客户端的请求信息将被JSP引擎封装在request对象中，通过request对象调用相应的方法便可以获取用户提交的信息。<br>序号 方 法 说 明<br>(1)object getAttribute(String name) 返回指定属性的属性值<br>(2)Enumeration getAttributeNames() 返回所有可用属性名的枚举<br>(3) String getCharacterEncoding() 返回字符编码方式<br>(4) int getContentLength() 返回请求体的长度(以字节数)<br>(5) String getContentType() 得到请求体的MIME类型<br>(6) ServletInputStream getInputStream() 得到请求体中一行的二进制流<br>(7) String getParameter(String name) 返回name指定参数的参数值<br>(8) Enumeration getParameterNames() 返回可用参数名的枚举<br>(9) String[] getParameterValues(String name) 返回包含参数name的所有值的数组<br>(10) String getProtocol() 返回请求用的协议类型及版本号<br>(11) String getScheme() 返回请求用的计划名,如:http.https及ftp等<br>(12) String getServerName() 返回接受请求的服务器主机名<br>(13) int getServerPort() 返回服务器接受此请求所用的端口号<br>(14) BufferedReader getReader() 返回解码过了的请求体<br>(15) String getRemoteAddr() 返回发送此请求的客户端IP地址<br>(16) String getRemoteHost() 返回发送此请求的客户端主机名<br>(17) void setAttribute(String key,Object obj) 设置属性的属性值<br>(18) StringgetRealPath(String path) 返回一虚拟路径的真实路径<br>(19) String request.getContextPath() 返回上下文路径<br>3、response对象<br>和request对象一样，response对象也由服务器生成，用于服务器数据发送到客户端以响应客户端的请求。当用户向服务器提交了HTTP请求后，服务器将会根据用户的请求建立默认的response对象，然后传入jspService（）函数中，给客户提供响应信息。<br>序号 方 法 说 明<br>(1) String getCharacterEncoding() 返回响应用的是何种字符编码<br>(2) ServletOutputStream getOutputStream() 返回响应的一个二进制输出流<br>(3) PrintWriter getWriter() 返回可以向客户端输出字符的一个对象<br>(4) void setContentLength(int len) 设置响应头长度<br>(5) void setContentType(String type) 设置响应的MIME类型<br>(6) sendRedirect(java.lang.String location) 重新定向客户端的请求<br>4、session对象(作用域：当浏览器第一次请求某个特定应用程序中的某个jsp页面时，session开始，直到与服务器断开连接，session结束)<br>session对象指的是客户端与服务器的一次会话，从客户端连到服务器的一个WebApplication开始，直到客户端与服务器断开连接为止。它是HttpSession类的实例。<br>Session对象是一个JSP内置对象，它在第一个JSP页面被装载时自动创建，完成会话期管理。从一个客户打开浏览器并连接到服务器开始，到客户关闭浏览器离开这个服务器结束，被称为一个会话。当一个客户访问一个服务器时，可能会在这个服务器的几个页面之间切换，服务器应当通过某种办法知道这是一个客户，就需要Session对象。<br>session对象具有会话作用域。<br>序号 方 法 说 明<br>（1） long getCreationTime() 返回SESSION创建时间<br>（2） public String getId() 返回SESSION创建时JSP引擎为它设的唯一ID号<br>（3） long getLastAccessedTime() 返回此SESSION里客户端最近一次请求时间<br>（4） int getMaxInactiveInterval() 返回两次请求间隔多长时间此SESSION被取消(ms)<br>（5） String[] getValueNames() 返回一个包含此SESSION中所有可用属性的数组<br>（6） void invalidate() 取消SESSION，使SESSION不可用<br>（7） boolean isNew() 返回服务器创建的一个SESSION,客户端是否已经加入<br>（8） void removeValue(String name) 删除SESSION中指定的属性<br>（9） void setMaxInactiveInterval() 设置两次请求间隔多长时间此SESSION被取消(ms)<br>5、application对象(作用域：服务器启动后，就会自动创建application对象，application对象由服务器创建，也由服务器自动清除，不能由用户创建和清除)<br>application对象实现了用户间数据的共享，可存放全局变量。它开始于服务器的启动，直到服务器的关闭，在此期间，此对象将一直存在;这样在用户的前后连接或不同用户之间的连接中，可以对此对象的同一属性进行操作;在任何地方对此对象属性的操作，都将影响到其他用户对此的访问。服务器的启动和关闭决定了application对象的生命。它是ServletContext类的实例。<br>序号 方 法 说 明<br>（1） Object getAttribute(String name) 返回给定名的属性值<br>（2） Enumeration getAttributeNames() 返回所有可用属性名的枚举<br>（3） void setAttribute(String name,Object obj) 设定属性的属性值<br>（4） void removeAttribute(String name) 删除一属性及其属性值<br>（5） String getServerInfo() 返回JSP(SERVLET)引擎名及版本号<br>（6） String getRealPath(String path) 返回一虚拟路径的真实路径<br>（7） ServletContext getContext(String uripath) 返回指定WebApplication的application对象<br>（8）  int getMajorVersion() 返回服务器支持的Servlet API的最大版本号<br>（9）  int getMinorVersion() 返回服务器支持的Servlet API的最小版本号<br>（10） String getMimeType(String file) 返回指定文件的MIME类型<br>（11）  URL getResource(String path) 返回指定资源(文件及目录)的URL路径<br>（12） InputStream getResourceAsStream(String path) 返回指定资源的输入流<br>（13） RequestDispatcher getRequestDispatcher(String uripath) 返回指定资源的RequestDispatcher对象<br>（14） Servlet getServlet(String name) 返回指定名的Servlet<br>（15） Enumeration getServlets() 返回所有Servlet的枚举<br>（16） Enumeration getServletNames() 返回所有Servlet名的枚举<br>（17）  void log(String msg) 把指定消息写入Servlet的日志文件<br>（18） void log(Exception exception,String msg) 把指定异常的栈轨迹及错误消息写入Servlet的日志文件<br>（19）  void log(String msg,Throwable throwable) 把栈轨迹及给出的Throwable异常的说明信息 写入Servlet的日志文件<br>6、exception对象<br>exception对象是一个例外对象，当一个页面在运行过程中发生了例外，就产生这个对象。如果一个JSP页面要应用此对象，就必须把isErrorPage设为true，否则无法编译。他实际上是java.lang.Throwable的对象<br>序号 方 法 说 明<br>（1） String getMessage() 返回描述异常的消息<br>（2） String toString() 返回关于异常的简短描述消息<br>（3） void printStackTrace() 显示异常及其栈轨迹<br>（4）  Throwable FillInStackTrace() 重写异常的执行栈轨迹<br>7、page对象<br>page对象就是指向当前JSP页面本身，有点象类中的this指针，它是java.lang.Object类的实例<br>序号 方 法 说 明<br>（1）class getClass 返回此Object的类<br>（2）int hashCode() 返回此Object的hash码<br>（3） boolean equals(Object obj) 判断此Object是否与指定的Object对象相等<br>（4） void copy(Object obj) 把此Object拷贝到指定的Object对象中<br>（5）Object clone() 克隆此Object对象<br>（6）String toString() 把此Object对象转换成String类的对象<br>（7） void notify() 唤醒一个等待的线程<br>（8）void notifyAll() 唤醒所有等待的线程<br>（9）void wait(int timeout) 使一个线程处于等待直到timeout结束或被唤醒<br>（10）void wait() 使一个线程处于等待直到被唤醒<br>（11）void enterMonitor() 对Object加锁<br>（12）void exitMonitor() 对Object开锁<br>8、pageContext对象<br>pageContext对象提供了对JSP页面内所有的对象及名字空间的访问，也就是说他可以访问到本页所在的SESSION，也可以取本页面所在的application的某一属性值，他相当于页面中所有功能的集大成者，它的本类名也叫pageContext。<br>序号 方 法 说 明<br>（1）JspWriter getOut() 返回当前客户端响应被使用的JspWriter流(out)<br>（2）HttpSession getSession() 返回当前页中的HttpSession对象(session)<br>（3） Object getPage() 返回当前页的Object对象(page)<br>（4） ServletRequest getRequest() 返回当前页的ServletRequest对象(request)<br>（5）ServletResponse getResponse() 返回当前页的ServletResponse对象(response)<br>（6）Exception getException() 返回当前页的Exception对象(exception)<br>（7）ServletConfig getServletConfig() 返回当前页的ServletConfig对象(config)<br>（8）ServletContext getServletContext() 返回当前页的ServletContext对象(application)<br>（9）void setAttribute(String name,Object attribute) 设置属性及属性值<br>（10） void setAttribute(String name,Object obj,int scope) 在指定范围内设置属性及属性值<br>（11）public Object getAttribute(String name) 取属性的值<br>（12）Object getAttribute(String name,int scope) 在指定范围内取属性的值<br>（13） public Object findAttribute(String name) 寻找一属性,返回起属性值或NULL<br>（14） void removeAttribute(String name) 删除某属性<br>（15）void removeAttribute(String name,int scope) 在指定范围删除某属性<br>（16） int getAttributeScope(String name) 返回某属性的作用范围<br>（17） Enumeration getAttributeNamesInScope(int scope) 返回指定范围内可用的属性名枚举<br>（18）void release() 释放pageContext所占用的资源<br>（19） void forward(String relativeUrlPath) 使当前页面重导到另一页面<br>（20） void include(String relativeUrlPath) 在当前位置包含另一文件<br>9、config对象<br>config对象是在一个Servlet初始化时，JSP引擎向它传递信息用的，此信息包括Servlet初始化时所要用到的参数(通过属性名和属性值构成)以及服务器的有关信息(通过传递一个ServletContext对象)<br>序号 方 法 说 明<br>（1）ServletContext getServletContext() 返回含有服务器相关信息的ServletContext对象<br>（2） String getInitParameter(String name) 返回初始化参数的值<br>（3） Enumeration getInitParameterNames() 返回Servlet初始化所需所有参数的枚举。<br>title: 2019.10.29<br>date: 2019-10-29 08:54:49<br>tags:</p>
+<hr>
 
-<p>这行代码中有两个属性，说明如下：</p>
-<p>action属性：点击登录按钮后，接下来的动作，这里是转到了LoginServlet。</p>
-<p>method属性：表单中数据的提交方式。</p>
-<p>接下来，再src文件夹下创建LoginServlet类，其中的doPost()方法参考代码如下：</p>
-<pre><code>1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-
-    /**
-    * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-    */
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // TODO Auto-generated method stub
-        request.setCharacterEncoding(&quot;utf-8&quot;);//设置request编码
-        response.setContentType(&quot;text/html;charset=utf-8&quot;);//设置response编码
-        String id = request.getParameter(&quot;username&quot;);//获取表单用户名
-        String pwd = request.getParameter(&quot;password&quot;);//获取表单密码
-        if(pwd==null || pwd.equals(&quot;&quot;)){//若没有密码，或为空
-            response.getWriter().print(&quot;密码不能为空！&quot;);//在当前页面(login.jsp)添加显示一句话。
-            return;//跳出doPost()方法，等待login.jsp页面再次提交表单。
-        }
-        if(id==null || id.equals(&quot;&quot;)){//若没有账号，或为空
-            response.getWriter().print(&quot;用户名不能为空！&quot;);//在当前页面(login.jsp)添加显示一句话。
-            return;//跳出doPost()方法，等待login.jsp页面再次提交表单。
-        }
-        if(id.equals(&quot;sam&quot;) &amp;&amp; pwd.equals(&quot;123&quot;)) {//用户名、密码正确
-            request.getRequestDispatcher(&quot;welcome.jsp&quot;).forward(request, response);//页面转发
-            //页面跳转的方式：(1)转发：foward(地址栏地址不变);(2)重定向：redirect(地址栏地址变化)
-        }else//用户名、密码错误
-        {
-            response.getWriter().print(&quot;用户名或密码有误，请重新输入！&quot;);//在当前页面(login.jsp)添加显示一句话。
-            return;//跳出doPost()方法，等待login.jsp页面再次提交表单。
-        }
-    }
-}</code></pre><h2 id="第三步：LoginServlet在项目配置文件web-xml中注册："><a href="#第三步：LoginServlet在项目配置文件web-xml中注册：" class="headerlink" title="第三步：LoginServlet在项目配置文件web.xml中注册："></a>第三步：LoginServlet在项目配置文件web.xml中注册：</h2><p>  <servlet></servlet><br>  <servlet-name></servlet-name><br>  <servlet-class></servlet-class><br>  <servlet-mapping></servlet-mapping><br>  <url-pattern></url-pattern></p>
-<h2 id="这五个都是注册一个servlet组件必须的节点"><a href="#这五个都是注册一个servlet组件必须的节点" class="headerlink" title="这五个都是注册一个servlet组件必须的节点"></a>这五个都是注册一个servlet组件必须的节点</h2><p>1，是用来注册Servlet的存放地址<br>这个是我们要注册servlet的名字<br>这个就是指向我们要注册的servlet 的类地址, 要带包路径<br>以上两个在一个servlet 节点之下.</p>
-<p>2， 是用来配置我们注册的组件的访问路径,<br>这个要与前面写的servlet的名字一致</p>
-<p><url-pattern> 配置这个组件的访问路径</url-pattern></p>
-<p> 以上两个在一个servlet-mapping 节点之下.<br>接续第一步、第二步内容为例：</p>
-<p>LoginServlet<br>sam.his.servlet.LoginServlet</p>
-<p>LoginServlet<br>/LoginServlet</p>
-<h2 id="第四步：实施登录"><a href="#第四步：实施登录" class="headerlink" title="第四步：实施登录"></a>第四步：实施登录</h2><p>注意：需要再添加一个登录成功页面welcome.jsp(参考第二步的doPost方法中代码)</p>
-<p>项目部署在tomcat服务器上，运行后在地址栏输入地址访问项目的login.jsp页面，表单中录入用户名、密码，尝试登录。</p>
-</form>
       
 
       
@@ -336,7 +240,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/23/2019-10-21/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/29/2019-10-29/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -350,18 +254,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/10/29/2019-10-29/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/10/14/GitHub安装完成/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">GitHub安装完成</div>
+    <a href="/2019/10/23/2019-10-21/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
       <i class="icon-circle-right"></i>
     </a>
   
